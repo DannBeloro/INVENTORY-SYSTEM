@@ -1,0 +1,232 @@
+  
+img.UMlogo{
+  background-image: ('img/UMlogo.png');
+  
+
+  }
+
+
+.header1{
+  text-align: center;
+  Margin-top: -12.2rem;
+  margin-left: -2rem;
+  font-size: 19px;
+  color:#000000;
+  font-family: 'georgia, serif';
+  padding: 20px;
+  height: 160px;
+  width: 1400px;
+  background-image: radial-gradient(white 5%, green 90%);
+  object-fit: none;
+}
+
+.header2{
+  text-align: center;
+  Margin-top: -11.5rem;
+  margin-left: -2rem;
+  font-size: 19px;
+  color:#000000;
+  font-family: 'georgia, serif';
+  padding: 20px;
+  height: 200px;
+  width: 1400px;
+  background-image: radial-gradient(white 5%, green 90%);
+  object-fit: none;
+
+}
+
+.form-wrapper {
+  width:250px;
+  height:300px;
+  position: absolute;
+  top: 35%;
+  left: 39%;
+  margin-left: auto;
+  margin-right: auto;
+  background: rgb(255, 255, 255);
+  padding: 15px 25px;
+  border-radius: 5px;
+  border-style: double;
+}
+
+.form-item {
+width:100%;
+}
+ 
+
+.h1{
+  font-size: 50px;
+  font-weight: 640;
+  margin-bottom: 1px;
+  color: #071b0f;
+  font-family:'sans-serif';
+}
+.h1staff{
+  font-size: 50px;
+  font-weight: 640;
+  margin-bottom: 19px;
+  color: #071b0f;
+  font-family:'sans-serif';
+}
+.h2staff{
+  font-size: 35px;
+  font-weight: 640;
+  margin-bottom: 3px;
+  color: #071b0f;
+  font-family:'sans-serif';
+}
+
+.form-item input{
+  border: 5px;
+  border-color: rgb(0, 0, 0);
+  background:transparent;
+  color: rgba(7, 2, 2, 0.267);
+  margin-top:11px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.2em;
+  height: 49px;
+  padding: 0 16px;
+  width: 100%;
+  padding-left: 55px;
+
+}
+input[type='password']{
+	
+	background-position: 10px 50%;
+}
+input[type='text']{
+
+	background-position: 10px 50%;
+
+}
+
+.form-item input:focus {
+  outline: none;
+  border:1.4px solid #060408;
+}
+
+.button-panel {
+  margin-bottom: 20px;
+  padding-top: 10px;
+  width: 100%;
+}
+
+.button-panel .button {
+  background: #1a8f1a;
+  border: none;
+  color: rgb(6, 0, 12);
+  cursor: pointer;
+  height: 50px;
+  font-family: 'helvetica','Open Sans', sans-serif;
+  font-size: 1.2em;
+  text-align: center;
+  text-transform: uppercase;
+  transition: background 0.6s linear;
+  width: 100%;
+  margin-top:10px;
+  border-radius: 20px;
+}
+
+.button:hover {
+  background: #02752e;
+}
+
+.form-item input, .button-panel .button {
+  border-radius: 2px
+}
+
+.reminder {
+  text-align: center;
+}
+
+.reminder a {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.reminder a:hover {
+  color: #110309;
+}
+
+.forminve{
+  width:1000px;
+  height:300px;
+  position: absolute;
+  top: 35%;
+  left: 12%;
+  margin-left: auto;
+  margin-right: auto;
+  background: rgba(15, 12, 3, 0.075);
+  padding: 15px 25px;
+  border-radius: 5px;
+  box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.377),inset 0px 1px 0px rgba(255,255,255,0.04);
+}
+
+.glyphicon  {
+  padding: 20px;
+  margin-right: 50rem;
+  margin-top: 20rem;
+
+   color: #eb146e;
+}
+
+div .container{
+  padding: 5rem;
+}
+
+.table {
+  position: absolute;
+  top: 330px;
+  left: 12px;
+  width: 220px;
+  height: 10px;
+  justify-content: center;
+}
+.searchbar {
+  position: absolute;
+  top: 200px; 
+  left: 370px;
+  height: 60px;
+  width: 600px;
+}
+.row {
+  position: absolute;
+  top: -70px; 
+  left: 60px;
+  height:60px;
+  width: 1250px;
+}
+.header3 {
+  position: absolute;
+  top: 150px; 
+  right: 0px;
+  height: 10px;
+  width: 250px;
+}
+.search{
+  position: absolute;
+  top: 200px; 
+  left: 370px;
+  height: 60px;
+  width: 600px;
+}
+.row1{
+  position: absolute;
+  top: -280px; 
+  left: -350px;
+  height:60px;
+  width: 1300px;
+}
+.mama {
+  position: absolute;
+  top: 200px;
+  right: 30px;
+}
+.papa{
+  position: absolute;
+  top: -80px; 
+  left: 30px;
+  height: 60px;
+  width: 1300px;
+}

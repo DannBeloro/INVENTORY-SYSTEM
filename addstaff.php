@@ -4,10 +4,10 @@ include('session.php');
 if(isset($_POST['submit'])){
     $name=$_POST['name'];
     $email=$_POST['email'];
-    $mobile=$_POST['mobile'];
+    $username=$_POST['username'];
     $password=$_POST['password'];
     
-  $sql="INSERT INTO staffs (name,email,mobile,password) values('$name','$email','$mobile','$password')";
+  $sql="INSERT INTO staffs (name,email,username,password) values('$name','$email','$username','$password')";
     $result=mysqli_query($con,$sql);
     if ($result){
       header ('location:staffdisplay.php' );
@@ -43,8 +43,8 @@ if(isset($_POST['submit'])){
     <input type="email" class="form-control" placeholder="Enter email" name="email"  autocomplete="off">
     </div>
     <div class="form-group">
-    <label>Mobile no. </label>
-    <input type="text" class="form-control" placeholder="Enter mobile no." name="mobile" autocomplete="off">
+    <label>Username </label>
+    <input type="text" class="form-control" placeholder="Enter username" name="username" autocomplete="off">
     </div>
     <div class="form-group">
     <label>Password </label>

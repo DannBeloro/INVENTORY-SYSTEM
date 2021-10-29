@@ -1,19 +1,20 @@
 <?php session_start(); ?>
 <?php include('dbcon.php'); ?>
-<html>
+<html> 
 <head>
+
 <title>ADMIN</title>
-<link rel="stylesheet" type="text/css" href="style.css">
+
+<link rel="stylesheet" type="text/css" href="design.css">
 </head>
 <body>
-<div class="umlogo">
-  <img src="img/umlogo.png" alt="UM LOGO" width="200" height="150">
-   
-	  
-  <div class = "title">
-  <h1>THE UNIVERSITY OF MANILA</h1>
-        <h1>BOOK INVENTORY</h1>
-    
+	
+<div class="UMlogo">
+<img src="img/UMlogo.png" style="width:15%">
+
+   <div class ="header1">
+  <h1 class="h1">THE UNIVERSITY OF MANILA</h1>
+    <h1 class="h2">Online Book Inventory with Tracking System</h1>
     
 <div class="form-wrapper">
 	
@@ -38,7 +39,6 @@
 		{
 			$username = mysqli_real_escape_string($con, $_POST['user']);
 			$password = mysqli_real_escape_string($con, $_POST['pass']);
-			
 			$query 		= mysqli_query($con, "SELECT * FROM users WHERE  password='$password' and username='$username'");
 			$row		= mysqli_fetch_array($query);
 			$num_row 	= mysqli_num_rows($query);
