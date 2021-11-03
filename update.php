@@ -10,7 +10,7 @@ if(isset($_POST['submit'])){
   $sql="UPDATE staffs set id=$id,name='$name',email='$email',username='$username',password='$password'"; 
     $result=mysqli_query($con,$sql);
     if ($result){
-        // echo "Updated Successfully";
+        // echo "Update Successfully";
      header ('location:staffdisplay.php' );
         }else {
         die(mysqli_error ($con));
