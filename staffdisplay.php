@@ -61,10 +61,10 @@ include('dbcon.php');?>
   <td>'.$username.'</td>
   <td>'.$password.'</td> 
   <td>
-  <button class="btn btn-primary"><a href="update.php?
+  <button class="btn btn-primary"><a href="stafflistupdate.php?
   updateid='.$id.'" class="text-light">Update</a></button>
   
-  <button class="btn btn-danger"><a href="delete.php?
+  <button class="btn btn-danger"><a href="staffdelete.php?
   deleteid='.$id.'" class="text-light">Delete</a></button>
   </td>
 </tr>'; 
