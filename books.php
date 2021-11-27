@@ -70,7 +70,7 @@ session_start();
       <th scope="col">Decriptive Title</th>
       <th scope="col">Price</th>
       <th scope="col">Stocks</th>
-      <th scope="col">Minus</th> 
+      <th scope="col" class="text-center" colspan="2">Action</th>
    </tr>
   </thead>
  <tbody>
@@ -97,7 +97,7 @@ session_start();
         }else{
           $status= 'red';
         }
-        echo "<tr><td class='text-center'>". $row["id"] . "<td class='text-center'>". $row["coursecode"] ."<td class='text-center'>". $row["title"]."<td class='text-center'>". $row["price"]."<td class='text-center' style='color:$status;'>". $row["stocks"]."<td class='text-center viewrow'><button type='button' name='view' class='btn btn-success viewbtn'>-</button></td>";
+        echo "<tr><td class='text-center'>". $row["id"] . "<td class='text-center'>". $row["coursecode"] ."<td class='text-center'>". $row["title"]."<td class='text-center'>". $row["price"]."<td class='text-center' style='color:$status;'>". $row["stocks"]."<td class='text-center viewrow'><button type='button' name='view' class='btn btn-success viewbtn'>-</button></td></td><td class='text-center'><button type='button' name='view' class='btn btn-primary viewbook'>+</button>";
       }
       echo "</table>";
     } else {
@@ -134,7 +134,8 @@ session_start();
           <input type="text" name="title" id="id_title" class="form-control" style="text-transform: uppercase;" readonly>
         </div>
         <div class="mb-3">
-          <input type="hidden" name="price" id="id_price" class="form-control" style="text-transform: uppercase;" readonly>
+          <label class="form-label">Price</label>
+          <input type="text" name="price" id="id_price" class="form-control" style="text-transform: uppercase;" readonly>
         </div>
         <div class="mb-3">
           <label class="form-label">Stocks</label>
@@ -148,6 +149,51 @@ session_start();
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
         <button type="submit" class="btn btn-primary" name="subtract">Save changes</button>
+
+      </div>
+              </form>
+    </div>
+  </div>
+</div>
+<!-- Modal -->
+
+<!-- Modal -->
+<div class="modal fade" id="addgrade" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Stocks</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <form action="AddStock.php" method="POST">
+      <div class="modal-body">
+        
+          <input type="hidden" name="id" id="id_addid" class="form-control" style="text-transform: uppercase;">
+
+        <div class="mb-3">
+          <label class="form-label">Course Code</label>
+          <input type="text" name="code" id="id_addcode" class="form-control" style="text-transform: uppercase;" required>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Descriptive Title</label>
+          <input type="text" name="title" id="id_addtitle" class="form-control" style="text-transform: uppercase;" required>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Price</label>
+          <input type="text" name="price" id="id_addprice" class="form-control" style="text-transform: uppercase;" required>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Stocks</label>
+          <input type="text" name="stocks" id="id_addstocks" class="form-control" style="text-transform: uppercase;" readonly>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Add</label>
+          <input type="number" name="addnumber" id="id_addsubtract" class="form-control" required>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="submit" class="btn btn-primary" name="add">Save changes</button>
 
       </div>
               </form>
@@ -185,6 +231,29 @@ $('#id_stocks').val(data[4]);
 });
  </script>
 
+ <script>
+
+$(document).ready(function(){
+  $('.viewbook').on('click', function(){
+    $('#addgrade').modal('show');
+
+    $tr = $(this).closest('tr');
+
+    var data = $tr.children("td").map(function(){
+      return $(this).text();
+    }).get();
+
+console.log(data);
+$('#id_addid').val(data[0]);
+$('#id_addcode').val(data[1]);
+$('#id_addtitle').val(data[2]);
+$('#id_addprice').val(data[3]);
+$('#id_addstocks').val(data[4]);
+
+
+  });
+});
+ </script>
 </body>
 </html> 
 </div>
