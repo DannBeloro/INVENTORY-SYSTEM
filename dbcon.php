@@ -1,5 +1,5 @@
 <?php
-$con = mysqli_connect("localhost","root","","db");
+$con = mysqli_connect("localhost","root","","admin");
 
 // Check connection
 if (mysqli_connect_errno())

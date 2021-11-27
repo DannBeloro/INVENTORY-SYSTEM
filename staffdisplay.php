@@ -1,6 +1,5 @@
 <?php
-include('dbcon.php');
-include('session.php');?>
+include('dbcon.php');?>
 <title>ADMIN Side</title>
 <!DOCTYPE html>
     <head>
@@ -34,7 +33,7 @@ include('session.php');?>
     <div class = "papa">
     <tr>
     <table class="table">
-      <th scope="col">ID</th>
+      <th scope="col">#</th>
       <th scope="col">Fullname</th>
       <th scope="col">Email</th>
       <th scope="col">Username</th>
@@ -51,13 +50,13 @@ include('session.php');?>
  if ($result){
   while($row=mysqli_fetch_assoc($result)){
   $id=$row['id'];
-  $name=$row['name'];
+  $fullname=$row['name'];
   $email=$row['email'];
   $username=$row['username'];
   $password=$row['password'];
   echo'<tr>
-  <td>'.$id.'</th>
-  <td>'.$name.'</td>
+  <th scope="row">'.$id.'</th>
+  <td>'.$fullname.'</td>
   <td>'.$email.'</td>
   <td>'.$username.'</td>
   <td>'.$password.'</td> 

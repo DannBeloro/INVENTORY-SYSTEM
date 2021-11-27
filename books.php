@@ -79,7 +79,7 @@ session_start();
 
 ?>
   <?php 
-      $con = mysqli_connect("localhost","root","","db");
+      $con = mysqli_connect("localhost","root","","admin");
       if(isset($_GET['search'])){
 
       $filtervalues = $_GET['search'];

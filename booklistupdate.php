@@ -1,17 +1,17 @@
-
-
 <?php 
 include('dbcon.php');
+$id=$_GET['updateid'];
 if(isset($_POST['submit'])){
     $coursecode=$_POST['coursecode'];
     $title=$_POST['title'];
     $price=$_POST['price'];
     $stocks=$_POST['stocks'];
     
-  $sql="INSERT INTO books (coursecode,title,price,stocks) values('$coursecode','$title','$price','$stocks')";
+  $sql="UPDATE staffs set id=$id,coursecode='$coursecode',title='$title',price='$price',stocks='$stocks'"; 
     $result=mysqli_query($con,$sql);
     if ($result){
-      header ('location:Books.php' );
+        // echo "Update Successfully";
+     header ('location:bookslist.php' );
         }else {
         die(mysqli_error ($con));
     }
@@ -30,37 +30,34 @@ if(isset($_POST['submit'])){
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-    <title>Add Books</title>
+    <title>Books Update</title>
   </head>
   <body>
     <div class="container my-5">
     <form method="post"> 
   <div class="form-group">
-    <label>Course code</label>
-    <input type="text" class="form-control" placeholder="Enter course code" name="coursecode" autocomplete="off">
+    <label>Course Code</label>
+    <input type="text" class="form-control" placeholder="Enter new  Course Code" name="coursecode" autocomplete="off">
 </div> 
 <div class="form-group">
     <label>Descriptive Title </label>
-    <input type="text" class="form-control" placeholder="Enter Book title" name="title"  autocomplete="off">
+    <input type="email" class="form-control" placeholder="Enter new Desciptive Title" name="title"  autocomplete="off">
     </div>
     <div class="form-group">
     <label>Price </label>
-    <input type="text" class="form-control" placeholder="Enter price" name="price" autocomplete="off">
+    <input type="text" class="form-control" placeholder="Enter new Price" name="price" autocomplete="off">
     </div>
     <div class="form-group">
-    <label>Stocks</label>
-    <input type="text" class="form-control" placeholder="Enter stocks" name="stocks" autocomplete="off">
+    <label>Stocks </label>
+    <input type="password" class="form-control" placeholder="Enter new Stocks" name="stocks" autocomplete="off">
     </div>
     
     <body>
     <div class="container">
-    <button class="btn btn-primary my-5"name="submit"><a href ="Books.php"
-    class="text-light">ADD </a>
+    <button class="btn btn-primary my-5"name="submit"><a href ="booklistupdate.php"
+    class="text-light">Update</a>
     </button> 
 </div>
-<button class="btn btn-primary my-5"name="submit"><a href ="Books.php"
-    class="text-light">BACK </a>
-    </button>
 </form>
   </body>
 </html>
