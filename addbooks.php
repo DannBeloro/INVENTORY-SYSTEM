@@ -2,6 +2,7 @@
 
 <?php 
 include('dbcon.php');
+
 if(isset($_POST['submit'])){
     $coursecode=$_POST['coursecode'];
     $title=$_POST['title'];
@@ -56,11 +57,12 @@ if(isset($_POST['submit'])){
     <div class="container">
     <button class="btn btn-primary my-5"name="submit"><a href ="Books.php"
     class="text-light">ADD </a>
-    </button> 
-</div>
-<button class="btn btn-primary my-5"name="submit"><a href ="Books.php"
+    </button>
+    <button class="btn btn-primary my-5"name="submit"><a href ="Books.php"
     class="text-light">BACK </a>
     </button>
+</div>
+
 </form>
   </body>
 </html>

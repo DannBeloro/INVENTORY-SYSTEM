@@ -1,4 +1,6 @@
+
 <?php 
+include('staffsession.php');
 include('dbcon.php');
 $id=$_GET['updateid'];
 if(isset($_POST['submit'])){

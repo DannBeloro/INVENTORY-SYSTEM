@@ -21,8 +21,8 @@ include('dbcon.php');?>
 <div>   
     <div class= "header3">
     <button class="btn btn-dark"name="submit"><a href ="addbooks.php" class="text-light">ADD </a> </button> 
-    <button class="btn btn-dark"name="submit"><a href ="booklist.php" class="text-light">BOOKLIST </a></button>
-    <button class="btn btn-dark"name="submit"><a href ="staffprofile.php" class="text-light">PROFILE </a></button> 
+    <button class="btn btn-dark"name="submit"><a href ="books.php" class="text-light">Search </a></button>
+    <button class="btn btn-dark"name="submit"><a href ="staffprofile.php" class="text-light">Profile </a></button> 
 
 </div>
       
@@ -58,8 +58,6 @@ include('dbcon.php');?>
   <td>'.$price.'</td>
   <td>'.$stocks.'</td> 
   <td>
-  <button class="btn btn-primary"><a href="booklistupdate.php?
-  updateid='.$id.'" class="text-light">Update</a></button>
   
   <button class="btn btn-danger"><a href="booksdelete.php?
   deleteid='.$id.'" class="text-light">Delete</a></button>

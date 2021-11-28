@@ -1,7 +1,4 @@
-<?php include('dbcon.php'); 
-session_start();
-?>
-
+<?php include('dbcon.php'); session_start();?>
 <!DOCTYPE html>
 <link rel="stylesheet" type="text/css" href="design.css">
 </head>

@@ -1,6 +1,7 @@
+
 <?php
 include('dbcon.php');
-include('session.php');?>
+include('staffsession.php');?>
 <title>ADMIN Side</title>
 <!DOCTYPE html>
     <head>
